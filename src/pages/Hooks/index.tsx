@@ -1,5 +1,6 @@
-import React from "react";
 import { useMemo, useState, useEffect, useCallback } from "react";
+
+import UserContext from "../../contexts/UserContext";
 
 import Child1 from "./Child1";
 import Child2 from "./Child2";
@@ -38,11 +39,11 @@ const Hooks = () => {
     }, [n1]);
 
     return(
-        <>
+        <UserContext.Provider value={{user: 'Teste'}}>
             <Child1 value={n1} setValue={setNumber1} color={changeColor} />
 
             <Child2 value={n2} setValue={setNumber2} />
-        </>
+        </UserContext.Provider>
     )
 }
 

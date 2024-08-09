@@ -8,7 +8,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Dropdown from './components/Dropdown';
 import Home from './pages/Home';
 
 const router = createBrowserRouter([
